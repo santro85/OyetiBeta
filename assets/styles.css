@@ -175,8 +175,8 @@ body{
 
 .o-character{
     margin: -33% auto 0;
-    width: 38%;
-    height: 38%;
+    width: 38% !important;
+    height: 38% !important;
 }
 
 .o-mountain-bg{
