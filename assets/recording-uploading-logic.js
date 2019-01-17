@@ -334,7 +334,10 @@ function get_user_media(id){
                       };
 
   //console.log(constraints);
-  navigator.mediaDevices.getUserMedia({audio: constraints}).then(record_processor);
+  navigator.mediaDevices.getUserMedia({audio: constraints}).then(record_processor).catch(error => {
+    // Autoplay was prevented.
+    // Show a "Play" button so that user can start playback.
+  });
 }
 
 function Record() {
