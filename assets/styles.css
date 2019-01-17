@@ -182,8 +182,8 @@ body{
 .o-mountain-bg{
     margin: -20% auto 0;
     background-position: center;
-    width: 75%;
-    height: 75%;
+    width: 75% !important;
+    height: 75% !important;
 }
 
 #o-countdownSection h1{
