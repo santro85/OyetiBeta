@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: avenirHeavyOblique;
+    src: url(fonts/Avenir-HeavyOblique.ttf);
+}
+
+@font-face {
+    font-family: avenirMediumOblique;
+    src: url(fonts/Avenir-MediumOblique.ttf);
+}
+
+@font-face {
+    font-family: avenirHeavy;
+    src: url(fonts/Avenir-Heavy.ttf);
+}
+
+@font-face {
+    font-family: avenirMedium;
+    src: url(fonts/Avenir-Medium.ttf);
+}
+
+.o-textCenter{text-align:center;}
+
+html{    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    height:100%;    
+}
+
+body{
+    padding:0px;
+    margin:0px;
+    background-color:transparent !important;
+    height:100vh;
+}
+
+.o-bg-purple{
+	background-color:#7B75FD; 
+    background-image: linear-gradient(#BF52E1, #7B75FD);
+	background-image:-moz-linear-gradient(to bottom,#BF52E1, #7B75FD);
+          
+}
+
+@media screen and (orientation:landscape) 
+{
+    .o-bg-purple{
+        height:unset;        
+    }
+}
+
+.o-logo{
+    font-family: avenirHeavyOblique; 
+    font-size:8vw; 
+    color: #ffffff;     
+    letter-spacing: -2px;
+    font-style:italic;
+    float:left;
+}
+
+.o-starCountBox{
+    float: right;
+    border-radius: 10vw;
+    height: 8vw;
+    line-height: 8vw;
+    background-color: #fff;
+    padding:0px 2% 0px 6%;
+    margin-top: 8px;
+    position: relative;
+    box-shadow:0 3px 9px 0 rgba(0,0,0,.2), 0 3px 9px 0 rgba(0,0,0,.2);
+}
+
+.o-startCount{
+    font-family:avenirHeavy;
+    font-size:6vw;
+    margin-right:10px;
+}
+
+.o-starIcon {   
+    font-family: FontAwesome;
+    font-size: 6vw;
+    color: #FFBE45;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.o-starIcon::after {
+    content: '\f005';
+}
+
+.o-counter{
+    margin:0px auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top:-45px;
+    /*width: 864px;   
+    height: 500px;  
+    float:left;  */
+}
+
+.o-poper{
+    margin: -10px auto 0;
+    width: 85vw;
+    height: 75vw;
+    position: relative;
+    background: url('images/Card-Animation.gif') no-repeat;
+    float: left;
+    padding: 42px 0px 0px 0px;
+    background-size: cover;
+}
+
+.o-offerrecieved{
+    font-family: avenirHeavy;
+    margin: 0 auto;
+    background-color: #ffbe45;
+    height: 54vw;
+    width: 54vw;
+    border-radius: 18px;
+    box-shadow: 0 14px 44px 0 rgba(0,0,0,.1), 0 6px 26px 0 rgba(0,0,0,.1);
+    background-size: contain;
+    position: relative;
+}
+
+.o-offerrecieved .o-starIntro{
+    padding:15px;
+}
+
+.o-starIntro h4{
+    color:#ffffff;
+    font-size:7vw;
+    margin-bottom:0px;
+    text-align:center;
+    margin-top: 5vw;
+}
+
+.o-starIntro h6{
+    color:#ffffff;
+    text-align:center;
+    font-size:5vw;
+    margin-bottom:0px;
+}
+
+.o-offerrecieved .o-starInfo{
+    background-color: #fff;
+    text-align: center;
+    font-size: 8vw;
+    color: #606060;
+    /* line-height: 65px; */
+    height:30%;
+    float: left;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.o-offerrecieved .o-starInfo::before{
+    background: linear-gradient(-45deg,#fff 16px,transparent 0),linear-gradient(45deg,#fff 16px,transparent 0);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: 22px 32px;
+    content: " ";
+    display: block;
+    height: 22px;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    margin-top: -22px;
+}
+
+.o-character{
+    margin: -33% auto 0;
+    width: 38%;
+    height: 38%;
+}
+
+.o-mountain-bg{
+    margin: -20% auto 0;
+    background-position: center;
+    width: 75%;
+    height: 75%;
+}
+
+#o-countdownSection h1{
+    font-family: avenirMediumOblique; 
+    font-size: 10vw;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom:0px;
+}
+
+#o-countdownSection h4{
+    font-family: avenirMediumOblique; 
+    font-size: 7vw;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom:0px; 
+    margin-top:-5px;  
+}
+
+#o-countdownSection p{
+    font-family: avenirMediumOblique; 
+    color: #EAFFB2;
+    text-align: center;
+    font-size: 5vw;
+}
+
+.hide{
+    display:none;
+}
+
+.o-btnHelpRedeem{
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 3px 9px 0 rgba(0,0,0,.2), 0 3px 9px 0 rgba(0,0,0,.2);
+    font-family: avenirMedium;
+    color: #606060;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px auto;
+}
