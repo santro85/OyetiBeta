@@ -91,11 +91,11 @@ body{
 }
 
 .o-counter{
-    margin:0px auto;
+    margin:0px auto !important;
     width: 100% !important;
     height: 100% !important;
     position: relative;
-    margin-top:-45px;
+    margin-top:-45px !important;
     /*width: 864px;   
     height: 500px;  
     float:left;  */
