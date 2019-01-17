@@ -3,7 +3,7 @@ var CACHE_NAME = 'Oyeti';
 var urlsToCache = [
   '/',
   'style.css',
-  'app.js',
+  'main.js',
   'icons/icon-256x256.png',
   'bootstrap/jsbootstrap.min.js',
   'bootstrap/cssbootstrap.min.css',
