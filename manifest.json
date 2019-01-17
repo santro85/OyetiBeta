@@ -3,9 +3,9 @@
   "short_name": "Oyeti",
   "theme_color": "#a849c8",
   "background_color": "#bf52e1",
-  "display": "standalone",
-  "scope": ".",
+  "display": "standalone",  
   "start_url": "/OyetiBeta/",
+  "scope": "/OyetiBeta/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
