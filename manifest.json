@@ -4,8 +4,8 @@
   "theme_color": "#a849c8",
   "background_color": "#bf52e1",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": ".",
+  "start_url": "/OyetiBeta/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
