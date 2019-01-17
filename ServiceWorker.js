@@ -5,8 +5,8 @@ var urlsToCache = [
   'style.css',
   'assets/app.js',
   'assets/icons/icon-256x256.png',
-  'assets/bootstrap/jsbootstrap.min.js',
-  'assets/bootstrap/cssbootstrap.min.css',
+  'assets/bootstrap/js/bootstrap.min.js',
+  'assets/bootstrap/css/bootstrap.min.css',
   'assets/Jquery/jquery-3.3.1.min.js'
 ];
 
