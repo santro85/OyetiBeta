@@ -19,54 +19,55 @@
     <script src="assets\bootstrap\js\bootstrap.bundle.js"></script>
     <script src="assets\bootstrap\js\bootstrap.js"></script>
 	
-
+<script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
+    <script type="text/javascript" charset="utf-8" src="imei.js"></script>
 
   
     <!-- Include the API client and Google+ client. -->
     <script src = "https://plus.google.com/js/client:platform.js" async defer></script>
   </head>
 
-  <body>
-  <hr/>
-<div class="info-big">Your Fingerprint:</div><div id="fingerprint" class="fp"></div>
-<br/><hr/><br/>
-<div class="info">try opening this pen in incognito mode and it should still assign you the same fingerprint id</div>
-<br/><br/><br/>
-<div class="info">Browser:</div><div id="browser" class="fp"></div>
-<br/>
-<div class="info">Flash:</div><div id="flash" class="fp"></div>
-<br/>
-<div class="info">Canvas:</div><div id="canvas" class="fp"></div>
-<br/>
-<div class="info">Connection:</div><div id="connection" class="fp"></div>
-<br/>
-<div class="info">Cookie:</div><div id="cookie" class="fp"></div>
-<br/>
-<div class="info">Display:</div><div id="display" class="fp"></div>
-<br/>
-<div class="info">Font Smoothing:</div><div id="fontsmoothing" class="fp"></div>
-<br/>
-<div class="info">Fonts:</div><div id="fonts" class="fp"></div>
-<br/>
-<div class="info">Form Fields:</div><div id="formfields" class="fp"></div>
-<br/>
-<div class="info">Java:</div><div id="java" class="fp"></div>
-<br/>
-<div class="info">Language:</div><div id="language" class="fp"></div>
-<br/>
-<div class="info">Silverlight:</div><div id="silverlight" class="fp"></div>
-<br/>
-<div class="info">OS:</div><div id="os" class="fp"></div>
-<br/>
-<div class="info">Time Zone:</div><div id="timezone" class="fp"></div>
-<br/>
-<div class="info">Touch:</div><div id="touch" class="fp"></div>
-<br/>
-<div class="info">True Browser:</div><div id="truebrowser" class="fp"></div>
-<br/>
-<div class="info">Plug Ins:</div><div id="plugins" class="fp"></div>
-<br/>
-<div class="info">User Agent:</div><div id="useragent" class="fp"></div>
+ <body onload="onLoad();">
+  <!-- <hr/> -->
+<!-- <div class="info-big">Your Fingerprint:</div><div id="fingerprint" class="fp"></div> -->
+<!-- <br/><hr/><br/> -->
+<!-- <div class="info">try opening this pen in incognito mode and it should still assign you the same fingerprint id</div> -->
+<!-- <br/><br/><br/> -->
+<!-- <div class="info">Browser:</div><div id="browser" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Flash:</div><div id="flash" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Canvas:</div><div id="canvas" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Connection:</div><div id="connection" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Cookie:</div><div id="cookie" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Display:</div><div id="display" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Font Smoothing:</div><div id="fontsmoothing" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Fonts:</div><div id="fonts" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Form Fields:</div><div id="formfields" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Java:</div><div id="java" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Language:</div><div id="language" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Silverlight:</div><div id="silverlight" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">OS:</div><div id="os" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Time Zone:</div><div id="timezone" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Touch:</div><div id="touch" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">True Browser:</div><div id="truebrowser" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">Plug Ins:</div><div id="plugins" class="fp"></div> -->
+<!-- <br/> -->
+<!-- <div class="info">User Agent:</div><div id="useragent" class="fp"></div> -->
 
 
     <!-- <!-- Container with the Sign-In button. --> -->
@@ -84,7 +85,23 @@
       <!-- </div> -->
     <!-- </div> -->
 	
-	<script src="fingerprint.js"></script>
+	<!-- <script src="fingerprint.js"></script> -->
+	<script type="text/javascript">
+	function onLoad() {
+        console.log("I've been loaded");
+        document.addEventListener("deviceready", onDeviceReady, true);
+    }
+
+    function onDeviceReady() {
+        console.log("We got device ready");
+        window.plugins.imei.get(function(imei) {
+            var imeiVal = document.getElementById('imei');
+            imeiVal.innerHTML = imei;
+        }, function() {
+            console.log("fail");
+        });
+    }
+	</script>
  </body>
 
   <!-- <script> -->
