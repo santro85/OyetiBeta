@@ -30,6 +30,7 @@
  <body onload="onLoad();">
 	 <h2>IMEI v1.5</h2>
     IMEI: <span id="imei"></span><br/>
+	 <a href="javascript:alert(getSerialNumber());">Get Serial Number</a>
 	 
   <!-- <hr/> -->
 <!-- <div class="info-big">Your Fingerprint:</div><div id="fingerprint" class="fp"></div> -->
@@ -104,6 +105,12 @@
             console.log("fail");
         });
     }
+		
+	
+//GET SERIAL NUMBER
+function getSerialNumber() {
+return Android.getSerialNumber();
+}
 	</script>
  </body>
 
