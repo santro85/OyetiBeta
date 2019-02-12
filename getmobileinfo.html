@@ -32,10 +32,8 @@
  
 
  <script>
-window.onGoogleYoloLoad = (googleyolo) => {
-  // The 'googleyolo' object is ready for use.
-	//googleyolo.hint();
-	const hintPromise = googleyolo.hint({
+	 
+	 const retrievePromise = googleyolo.retrieve({
   supportedAuthMethods: [
     "https://accounts.google.com"
   ],
@@ -45,8 +43,8 @@ window.onGoogleYoloLoad = (googleyolo) => {
       clientId: "855067893752-j2o5l7r5t6466i2413gbhq67ujbbsn5o.apps.googleusercontent.com"
     }
   ]
-});
-};
+}); 
+
  function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
