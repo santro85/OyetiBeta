@@ -23,7 +23,7 @@
 	
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	
-
+<script src="https://smartlock.google.com/client"></script>
 
   </head>
 
@@ -32,6 +32,9 @@
  
 
  <script>
+window.onGoogleYoloLoad = (googleyolo) => {
+  // The 'googleyolo' object is ready for use.
+};
  function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
