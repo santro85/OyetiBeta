@@ -61,7 +61,7 @@ alert(credential.id);
 //useGoogleIdTokenForAuth(credential.idToken);
 }
 }, (error) => {
-console.log(“oops”);
+console.log('oops');
 console.log(error);
 // Credentials could not be retrieved. In general, if the user does not
 // need to be signed in to use the page, you can just fail silently; or,
@@ -84,14 +84,14 @@ clientId: '855067893752-j2o5l7r5t6466i2413gbhq67ujbbsn5o.apps.googleusercontent.
 ]
 });
 hintPromise.then((credential) => {
-console.log(“hint worked”);
+console.log('hint worked');
 console.log(credential);
 if (credential.idToken) {
 // Send the token to your auth backend.
 useGoogleIdTokenForAuth(credential.idToken);
 }
 }, (error) => {
-console.log(“hint failed”);
+console.log('hint failed');
 console.log(error);
 switch (error.type) {
 case “userCanceled”:
