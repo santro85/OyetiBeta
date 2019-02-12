@@ -49,7 +49,7 @@ clientId: '855067893752-j2o5l7r5t6466i2413gbhq67ujbbsn5o.apps.googleusercontent.
 ]
 });
 retrievePromise.then((credential) => {
-console.log(“ok!”);
+console.log('ok');
 console.log(credential);
 if (credential.password) {
 
@@ -61,7 +61,7 @@ alert(credential.id);
 //useGoogleIdTokenForAuth(credential.idToken);
 }
 }, (error) => {
-console.log(“oops!”);
+console.log(“oops”);
 console.log(error);
 // Credentials could not be retrieved. In general, if the user does not
 // need to be signed in to use the page, you can just fail silently; or,
