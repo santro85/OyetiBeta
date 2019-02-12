@@ -31,7 +31,8 @@
  <div class="g-signin2" data-onsuccess="onSignIn" data-prompt="select_account"></div>
  
 
- <script>
+ <script type="text/javascript">
+	 $(document).ready(function(){
 	 
 	 const retrievePromise = googleyolo.retrieve({
   supportedAuthMethods: [
@@ -44,6 +45,8 @@
     }
   ]
 }); 
+		 
+	 });
 
  function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
