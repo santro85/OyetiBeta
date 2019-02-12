@@ -33,18 +33,27 @@
 
  <script type="text/javascript">
 	 $(document).ready(function(){
-	 
-	 const retrievePromise = googleyolo.retrieve({
-  supportedAuthMethods: [
-    "https://accounts.google.com"
-  ],
-  supportedIdTokenProviders: [
-    {
+		 
+		 /* Check user not already logged in */
+if(!hasSession()){
+  googleyolo.hint({
+    supportedAuthMethods: [
+     "https://accounts.google.com"
+    ],
+    supportedIdTokenProviders: [{
       uri: "https://accounts.google.com",
       clientId: "855067893752-j2o5l7r5t6466i2413gbhq67ujbbsn5o.apps.googleusercontent.com"
-    }
-  ]
-}); 
+    }],
+    context: "signUp"
+  }).then((credential) => {
+    /* hit backend api and API TOKEN here */
+    /* Also save basic details that we get here */
+  }, (error)=> {
+    console.log("Error occurred: ",error.type);
+  });
+}
+	 
+	
 		 
 	 });
 
