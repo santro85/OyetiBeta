@@ -94,28 +94,28 @@ useGoogleIdTokenForAuth(credential.idToken);
 console.log('hint failed');
 console.log(error);
 switch (error.type) {
-case “userCanceled”:
+case 'userCanceled':
 // The user closed the hint selector. Depending on the desired UX,
 // request manual sign up or do nothing.
 break;
-case “noCredentialsAvailable”:
+case 'noCredentialsAvailable':
 // No hint available for the session. Depending on the desired UX,
 // request manual sign up or do nothing.
 break;
-case “requestFailed”:
+case 'requestFailed':
 // The request failed, most likely because of a timeout.
 // You can retry another time if necessary.
 break;
-case “operationCanceled”:
+case 'operationCanceled':
 // The operation was programmatically canceled, do nothing.
 break;
-case “illegalConcurrentRequest”:
+case 'illegalConcurrentRequest':
 // Another operation is pending, this one was aborted.
 break;
-case “initializationError”:
+case 'initializationError':
 // Failed to initialize. Refer to error.message for debugging.
 break;
-case “configurationError”:
+case 'configurationError':
 // Configuration error. Refer to error.message for debugging.
 break;
 default:
