@@ -71,7 +71,7 @@ console.log(error);
 // signing in might be useful or is required to proceed from this page,
 // you can call `hint()` to prompt the user to select an account to sign
 // in or sign up with.
-if (error.type === ‘noCredentialsAvailable’) {
+if (error.type === "noCredentialsAvailable") {
 const hintPromise = googleyolo.hint({
 supportedAuthMethods: [
 “https://accounts.google.com"
