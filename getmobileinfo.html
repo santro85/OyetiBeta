@@ -34,7 +34,18 @@
  <script>
 window.onGoogleYoloLoad = (googleyolo) => {
   // The 'googleyolo' object is ready for use.
-	googleyolo.hint();
+	//googleyolo.hint();
+	const hintPromise = googleyolo.hint({
+  supportedAuthMethods: [
+    "https://accounts.google.com"
+  ],
+  supportedIdTokenProviders: [
+    {
+      uri: "https://accounts.google.com",
+      clientId: "855067893752-j2o5l7r5t6466i2413gbhq67ujbbsn5o.apps.googleusercontent.com"
+    }
+  ]
+});
 };
  function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
